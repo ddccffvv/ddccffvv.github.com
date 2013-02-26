@@ -32,6 +32,23 @@
 <pre><code>:%!xxd
 :%!xxd -r
 </code></pre>
+
+<h3>Flask and apache (wsgi config put the webapp in a subfolder)</h3>
+
+<p>To put in the sites enabled config:</p>
+
+<pre><code>  WSGIDaemonProcess test user=usr group=usr home="/var/www/site/directory"
+  WSGIScriptAlias /path/on/site "/path/to/wsgi/file/test.wsgi"
+
+  &lt;Directory /var/www/site/directory/&gt;
+    WSGIProcessGroup test
+    WSGIApplicationGroup %{GLOBAL}
+    WSGIScriptReloading On # Automatic reload if the plugin files are changed
+    WSGIPassAuthorization On # pass on http authorization to the application
+    Order allow,deny
+    Allow from all
+  &lt;/Directory&gt;
+</code></pre>
       </section>
     </div>
 
