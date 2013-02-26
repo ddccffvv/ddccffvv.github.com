@@ -49,6 +49,13 @@
     Allow from all
   &lt;/Directory&gt;
 </code></pre>
+
+<h3>Starting up a debian arm version on qemu</h3>
+
+<p>Get the image from: <a href="http://people.debian.org/%7Eaurel32/qemu/arm/">http://people.debian.org/~aurel32/qemu/arm/</a></p>
+
+<pre><code>qemu-system-arm -M versatilepb -kernel vmlinuz-2.6.26-2-versatile -initrd initrd.img-2.6.26-2-versatile -hda debian_lenny_arm_standard.qcow2 -append "root=/dev/sda1" -redir tcp:5555::22
+</code></pre>
       </section>
     </div>
 
