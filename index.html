@@ -52,9 +52,9 @@
 
 <h3>Starting up a debian arm version on qemu</h3>
 
-<p>Get the image from: <a href="http://people.debian.org/%7Eaurel32/qemu/arm/">http://people.debian.org/~aurel32/qemu/arm/</a></p>
+<p>Get the image from: <a href="http://people.debian.org/%7Eaurel32/qemu/armel/">http://people.debian.org/~aurel32/qemu/armel/</a></p>
 
-<pre><code>qemu-system-arm -M versatilepb -kernel vmlinuz-2.6.26-2-versatile -initrd initrd.img-2.6.26-2-versatile -hda debian_lenny_arm_standard.qcow2 -append "root=/dev/sda1" -redir tcp:5555::22
+<pre><code>qemu-system-arm -M versatilepb -kernel vmlinuz-2.6.32-5-versatile -initrd initrd.img-2.6.32-5-versatile -hda debian_squeeze_arm_standard.qcow2 -append "root=/dev/sda1" -redir tcp:5555::22
 </code></pre>
 
 <h3>Cronjobs</h3>
